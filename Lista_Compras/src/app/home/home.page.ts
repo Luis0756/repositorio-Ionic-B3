@@ -10,8 +10,29 @@ export class HomePage {
   constructor() {}
 
   variavel_lista = [];
+  texto: string = "";
 
-  //*ngFor = "let item of minhaLista" no item
+  adiciona() {
+    if (!(this.texto == "")) {
+      this.variavel_lista.push(this.texto);
+      this.texto = "";
+    }
+
+      /*
+    if (this.texto == "") {
+
+    } else{
+      this.variavel_lista.push(this.texto);
+      this.texto = "";
+    }*/
+   
+  }
+
+  remove(indice) {
+    this.variavel_lista.splice(indice, 1)
+  }
+
+  //*ngFor = "let elemento_da_lista of minhaLista" no item
   //[(ngModel)]="texto" no input
 
 }
