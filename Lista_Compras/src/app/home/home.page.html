@@ -5,8 +5,12 @@
         <ion-col size="9">
           <ion-item>
             <ion-input placeholder="Nome de um produto" [(ngModel)]="texto"></ion-input>
-           
           </ion-item>
+
+          <ion-item>
+            <ion-input placeholder="Preço" [(ngModel)]="preco"></ion-input>
+          </ion-item>
+
         </ion-col>
         <ion-col size="3">
           <ion-button color="primary" size="small" (click)="adiciona()">
@@ -20,7 +24,7 @@
             <ion-grid>
               <ion-row>
                 <ion-col size="9">
-                  {{elemento_da_lista}}
+                  {{elemento_da_lista}} {{preco}}
                 </ion-col>
                 <ion-col size="3">
                   <ion-button color="danger" size="small" (click)="remove(i)">

@@ -11,11 +11,13 @@ export class HomePage {
 
   variavel_lista = [];
   texto: string = "";
+  preco = 0;
 
   adiciona() {
     if (!(this.texto == "")) {
       this.variavel_lista.push(this.texto);
       this.texto = "";
+      this.preco = null;
     }
 
       /*
