@@ -3,15 +3,11 @@
     <ion-grid>
       <ion-row>
         <ion-col size="9">
-          
           <ion-item>
             <ion-input placeholder="Nome de um produto" [(ngModel)]="texto" (keyup.enter)="adiciona()"></ion-input>
-          </ion-item>
-
-          <ion-item>
             <ion-input placeholder="Preço do produto" [(ngModel)]="preco" (keyup.enter)="adiciona()"></ion-input>
-          </ion-item>
 
+          </ion-item>
         </ion-col>
         <ion-col size="3">
           <ion-button color="primary" size="small" (click)="adiciona()">
@@ -29,7 +25,7 @@
                   {{elemento_da_lista[1][1]}} <!-- Exibir preço do item da lista-->
                 </ion-col>
                 <ion-col size="3">
-                  <ion-button color="danger" size="small" (click)="remove(elemento_da_lista[0][0])"> <!-- envia como parâmetro o indice do elemento da lista-->
+                  <ion-button color="danger" size="small" (click)="remove(elemento_da_lista[0])"> <!-- envia como parâmetro o indice do elemento da lista-->
                     <ion-icon name="trash-outline"></ion-icon>
                   </ion-button>
                 </ion-col>
