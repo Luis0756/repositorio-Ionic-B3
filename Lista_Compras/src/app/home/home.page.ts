@@ -26,7 +26,7 @@ export class HomePage {
   precoTotal: number = 0
 
   async adiciona() {
-    if (!(this.texto == "" || this.preco == 0)) {
+    if (!(this.texto == "" || this.preco == 0 || this.preco == null)) {
 
         //this.variavel_lista.push("0", this.texto);
      

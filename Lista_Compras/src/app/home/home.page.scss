@@ -1,21 +1,19 @@
 #posicionamento {
   padding-top: 20%;
-  padding-left: 10%;
+  padding-left: 1%;
   margin-bottom: 20%;
+  background-image: url("https://cdn.dribbble.com/users/1338391/screenshots/15303437/landscape_4x.jpg");
+  height: 100%;
 }
 
 #espacoPreco {
- 
-
-
-//padding-top: 5%;
-
-padding: 5% 20%;
-text-align: center;
-width: 100%;
-  background-color:green;
+  padding: 5%;
+  
+  background-color:rgb(134, 218, 134);
   position: fixed;
-  z-index: 2;
+  width: 100%;
   bottom: 0px;
-
+  z-index: 1;
+  text-align: center;
+  vertical-align: middle;
 }

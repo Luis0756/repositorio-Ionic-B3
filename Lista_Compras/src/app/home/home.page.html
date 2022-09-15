@@ -5,28 +5,30 @@
         <ion-col size="9">
           <ion-item>
             <ion-input placeholder="Nome de um produto" [(ngModel)]="texto" (keyup.enter)="adiciona()"></ion-input>
-            <ion-input placeholder="Preço do produto"  type="number" [(ngModel)]="preco" (keyup.enter)="adiciona()"></ion-input>
-
           </ion-item>
+          <ion-item>
+            <ion-input placeholder="Preço do produto"  type="number" [(ngModel)]="preco" (keyup.enter)="adiciona()"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button color="primary" size="small" (click)="adiciona()">
+            <ion-icon name="cart"></ion-icon>
+          </ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item *ngFor = "let elemento_da_lista of variavel_lista;">
-            <ion-col size="3">
-              <ion-button color="primary" size="small" (click)="remove(elemento_da_lista[0])">
-                <ion-icon name="save-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
             <ion-grid>
               <ion-row>
                 <ion-col size="9">
-                  {{elemento_da_lista[1][0]}} <!-- Exibir nome do item da lista-->
-                  {{elemento_da_lista[1][1]}} <!-- Exibir preço do item da lista-->
-                  
+                  <ion-text color="primary">
+                    <b> {{elemento_da_lista[1][0]}} </b><!-- Exibir nome do item da lista-->
+                    <br>R$ {{elemento_da_lista[1][1]}} <!-- Exibir preço do item da lista-->
+                  </ion-text>
                 </ion-col>
                 <ion-col size="3">
-                  <ion-button color="danger" size="small" > <!-- envia como parâmetro o indice do elemento da lista-->
+                  <ion-button color="danger" size="small" (click)="remove(elemento_da_lista[0])"> <!-- envia como parâmetro o indice do elemento da lista-->
                     <ion-icon name="trash-outline"></ion-icon>
                   </ion-button>
                 </ion-col>
@@ -44,6 +46,7 @@
   </div>
 
   <div id="espacoPreco">
-    {{precoTotal}}
+    <ion-icon name="cash"></ion-icon>
+    Total: R$ {{precoTotal}}
   </div>
 </ion-content>
